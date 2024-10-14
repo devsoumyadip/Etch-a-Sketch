@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toolsBox">
+            <div class="inputBox">
+                <h3>select canvas size</h3>
+                <input type="range" id="range" min="10" max="100" value="16">
+                <span id="rangeValue">16</span>
+            </div>
+            <div class="drawingTools">
+                <h3>Select your tools</h3>
+                <div class="btnBox">
+                    <button class="btn" id="pencil">pencil</button>
+                    <button class="btn" id="rainbow">rainbow</button>
+                </div>
+                <div class="btnBox">
+                    <button class="btn"  id="eraser">eraser</button>
+                    <button class="btn" id="shade">shade</button>
+                </div>
+                <div class="btnBox">
+                    <button class="btn" id="clear">clear</button>
+                </div>
+            </div>
+        </div>
+        <div class="canvas">
+            <!-- canvas will be created via js  -->
+        </div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>

@@ -17,7 +17,7 @@ function createGrid(size) {
         square.addEventListener('mouseover',()=>{
             const color=handleRainbow()
             square.style.backgroundColor=color
-            square.style.boxShadow= `.1vh .1vh .5vh 0.1vh ${color}`
+            // square.style.boxShadow= `.1vh .1vh .5vh 0.1vh ${color}`
         })
     }
     canvas.appendChild(row)
@@ -47,10 +47,6 @@ function handlePencil() {
     return 'black'
 }
 
-document.getElementById('eraser').addEventListener('click',handleEraser)
-function handleEraser() {
-    
-}
 
 document.getElementById('rainbow').addEventListener('click',handleRainbow)
 function handleRainbow() {

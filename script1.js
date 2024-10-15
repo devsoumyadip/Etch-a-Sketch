@@ -2,6 +2,7 @@ console.log('js connected');
 const canvas=document.querySelector('.canvas')
 const canvasWidth=650
 const gridSize=16
+let color='black'
 
 function createGrid(size) {
     for(i=0;i<size;i++){
@@ -15,7 +16,6 @@ function createGrid(size) {
         square.style.width=`${canvasWidth/size}px`
         row.appendChild(square)
         square.addEventListener('mouseover',()=>{
-            const color=handleRainbow()
             square.style.backgroundColor=color
             // square.style.boxShadow= `.1vh .1vh .5vh 0.1vh ${color}`
         })
@@ -44,14 +44,19 @@ function handleClear() {
 document.getElementById('pencil').addEventListener('click',handlePencil)
 
 function handlePencil() {
-    return 'black'
+    color= 'black'
 }
 
 
 document.getElementById('rainbow').addEventListener('click',handleRainbow)
 function handleRainbow() {
-    return `rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`
+    color= `rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`
 }
+
+document.getElementById('eraser').addEventListener('click',handleEraser)
+function handleEraser() {
+    color='white' 
+}                                                                                                                                                                       
 
 
 createGrid(gridSize)

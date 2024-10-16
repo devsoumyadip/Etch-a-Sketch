@@ -3,17 +3,21 @@
     padding: 0;
 }
 .container{
+    background-color: bisque;
     display: flex;
     gap: 140px;
     margin: 16px;
     padding: 16px;
     border: 1px solid black;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .canvas{
     width: 650px;
     height: 650px;
-    border: 1px solid black;
+    border: 5px solid rgb(21, 29, 25);
+    border-radius: 5px;
+    background-color: white;
 }
 .toolsBox{
     display: flex;
@@ -22,14 +26,16 @@
     justify-content: center;
     padding: 23px;
     gap: 26px;
-    border: 2px solid blue;
+    border: 10px solid rgb(117, 117, 188);
+    border-radius: 15px;
+    height: 400px;
 }
 
 
 
 .square{
-    border: 1px solid rgb(0, 255, 187);
-    border-radius: 5px;
+    border: 0.5px solid rgb(0, 255, 187); 
+    border-radius: 5px; 
 }
 .row{
     display: flex;
